@@ -6,7 +6,6 @@
     "AzureAppConfiguration.Endpoint_PrimaryStore": "https://ga-serverlessapidemo-cc-ac.azconfig.io",
     "AzureAppConfiguration.Endpoint_SecondaryStore": "https://ga-serverlessapidemo-cc-ac.azconfig.io",
     "AzureAppConfiguration.CacheExpirationTimeInSeconds": 120,
-    "AzureAppConfiguration.EnvironmentLabel": "Local",
-    "CosmosDB-ConnectionStringReadWrite": "AccountEndpoint=https://ga-serverlessapidemo-cc-cosmos.documents.azure.com:443/;AccountKey=O6BISBj4pifDh934yQO9Gn7QbBpcF1mAx5IfZD0MLunEbpFygjrMZ2PrdEiXtzmvHK4ehAD09U10fb7u0cj9OA==;"
+    "AzureAppConfiguration.EnvironmentLabel": ""    
   }
 }

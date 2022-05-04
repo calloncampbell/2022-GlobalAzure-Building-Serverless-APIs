@@ -1,0 +1,49 @@
+@hostUrlLocal = http://localhost:7071
+@hostUrlAzure = https://ga-serverlessapidemo-cc-fa.azurewebsites.net
+@hostUrl = {{hostUrlLocal}}
+
+### Welcome
+GET {{hostUrl}}/api/Welcome
+
+### HealthCheck
+HEAD {{hostUrl}}/api/todos
+
+### GetAllTodos
+GET {{hostUrl}}/api/todos
+
+### GetTodo
+GET {{hostUrl}}/api/todos/1
+
+### CreateTodo
+POST {{hostUrl}}/api/todos
+Content-Type: application/json
+
+{
+  "name": "test4",
+  "description": "",
+  "completed": false,
+  "completedDateUtc": null,
+  "id": "4",
+  "type": "todo",
+  "createdDateUtc": "2022-05-04T18:41:21.5094333+00:00",
+  "ttl": -1
+}
+
+### UpdateTodo
+PUT {{hostUrl}}/api/todos/1
+Content-Type: application/json
+
+{
+  "name": "test1",
+  "description": "updated 2",
+  "completed": false,
+  "completedDateUtc": null,
+  "id": "1",
+  "type": "todo",
+  "createdDateUtc": "2022-05-04T18:41:21.5094333+00:00",
+  "ttl": -1
+}
+
+### DeleteTodo
+DELETE {{hostUrl}}/api/todos/3
+
