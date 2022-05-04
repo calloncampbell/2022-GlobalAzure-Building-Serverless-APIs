@@ -20,6 +20,6 @@ namespace TodoListApi.FunctionApp.Abstractions.Models
         public bool Completed { get; set; }
 
         [JsonProperty("completedDateUtc")]
-        public DateTime CompletedDate { get; set; }
+        public DateTime? CompletedDate { get; set; }
     }
 }

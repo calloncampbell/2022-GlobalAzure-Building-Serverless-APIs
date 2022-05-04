@@ -34,9 +34,9 @@ namespace TodoListApi.FunctionApp.Services
             try
             {
                 var container = _cosmosClient.GetContainer(Constants.CosmosDb.DatabaseId, Constants.CosmosDb.Collection.ToDoItemCollection);
-                var query = $"SELECT * FROM c WHERE c.type = 'todoItem')";
-                var options = new QueryRequestOptions { PartitionKey = new PartitionKey("id") };
-                var iterator = container.GetItemQueryIterator<ToDoItem>(query, requestOptions: options);
+                var query = $"SELECT * FROM c";
+                //var options = new QueryRequestOptions { PartitionKey = new PartitionKey("id") };
+                var iterator = container.GetItemQueryIterator<ToDoItem>(query);
 
                 var locations = new List<ToDoItem>();
                 var cost = 0d;
@@ -68,7 +68,7 @@ namespace TodoListApi.FunctionApp.Services
             try
             {
                 var container = _cosmosClient.GetContainer(Constants.CosmosDb.DatabaseId, Constants.CosmosDb.Collection.ToDoItemCollection);
-                var response = await container.ReadItemAsync<ToDoItem>(id, new PartitionKey("id"));
+                var response = await container.ReadItemAsync<ToDoItem>(id, new PartitionKey(id));
                 var cost = response.RequestCharge;    // should never be more than 1 RU for documents under 1K
 
                 _logger.LogWarning("Point read executed for item type ToDoItem total RU cost {RequestCharge}", response.RequestCharge);

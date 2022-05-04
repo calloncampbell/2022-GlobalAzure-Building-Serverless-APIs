@@ -16,7 +16,7 @@ namespace TodoListApi.FunctionApp.Abstractions.Constants
         public class CosmosDb
         {
             public const int DefaultTimeToLive = -1;
-            public const string Connection = "ToDo:ConnectionStringReadWrite";
+            public const string Connection = "CosmosDB-ConnectionStringReadWrite";
             public const string DatabaseId = "ToDo";
 
             public class Collection

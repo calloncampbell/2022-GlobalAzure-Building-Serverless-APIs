@@ -100,7 +100,7 @@ namespace TodoListApi.FunctionApp
             var cosmosString = Configuration[Constants.CosmosDb.Connection];
             builder.Services.AddSingleton((s) =>
             {
-                CosmosClientBuilder configurationBuilder = new CosmosClientBuilder(Configuration[Constants.CosmosDb.Connection])
+                CosmosClientBuilder configurationBuilder = new CosmosClientBuilder(cosmosString)
                     .WithApplicationRegion(regionName);
 
                 return configurationBuilder.Build();
@@ -109,7 +109,7 @@ namespace TodoListApi.FunctionApp
             // Post Configure used since DefaultCredentials is not supported in cosmos DB triggers yet
             builder.Services.PostConfigure<CosmosDBOptions>(options =>
             {
-                options.ConnectionString = Configuration[Constants.CosmosDb.Connection];
+                options.ConnectionString = cosmosString;
             });
 
             builder.Services.AddLogging();
