@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureAppConfiguration.Endpoint_PrimaryStore": "https://ga-serverlessapidemo-cc-ac.azconfig.io",
+    "AzureAppConfiguration.Endpoint_SecondaryStore": "https://ga-serverlessapidemo-cc-ac.azconfig.io",
+    "AzureAppConfiguration.CacheExpirationTimeInSeconds": 120,
+    "AzureAppConfiguration.EnvironmentLabel": ""
+  }
+}
