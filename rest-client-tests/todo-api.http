@@ -1,22 +1,33 @@
-@hostUrlLocal = http://localhost:7071
-@hostUrlAzure = https://ga-serverlessapidemo-cc-fa.azurewebsites.net
-@hostUrl = {{hostUrlLocal}}
+@hostUrlLocal = http://localhost:7071/api/
+@hostUrlAzure = https://ga-serverlessapidemo-cc-fa.azurewebsites.net/api/
+@hostUrlApim = https://ga-serverlessapidemo-cc-apim.azure-api.net/serverlesstodo
+@hostUrl = {{hostUrlApim}}
+@subscriotionKey = 677b18fddf2844a99c52d2c9837efac1
 
 ### Welcome
-GET {{hostUrl}}/api/Welcome
+GET {{hostUrl}}/Welcome
+#subscription-key: {{subscriotionKey}} 
+
 
 ### HealthCheck
-HEAD {{hostUrl}}/api/todos
+HEAD {{hostUrl}}/todos
+#subscription-key: {{subscriotionKey}} 
+
 
 ### GetAllTodos
-GET {{hostUrl}}/api/todos
+GET {{hostUrl}}/todos
+#subscription-key: {{subscriotionKey}} 
+
 
 ### GetTodo
-GET {{hostUrl}}/api/todos/1
+GET {{hostUrl}}/todos/1
+#subscription-key: {{subscriotionKey}} 
+
 
 ### CreateTodo
-POST {{hostUrl}}/api/todos
+POST {{hostUrl}}/todos
 Content-Type: application/json
+#subscription-key: {{subscriotionKey}} 
 
 {
   "name": "test4",
@@ -29,9 +40,11 @@ Content-Type: application/json
   "ttl": -1
 }
 
+
 ### UpdateTodo
-PUT {{hostUrl}}/api/todos/1
+PUT {{hostUrl}}/todos/1
 Content-Type: application/json
+#subscription-key: {{subscriotionKey}} 
 
 {
   "name": "test1",
@@ -44,6 +57,7 @@ Content-Type: application/json
   "ttl": -1
 }
 
-### DeleteTodo
-DELETE {{hostUrl}}/api/todos/3
 
+### DeleteTodo
+DELETE {{hostUrl}}/todos/3
+#subscription-key: {{subscriotionKey}} 
