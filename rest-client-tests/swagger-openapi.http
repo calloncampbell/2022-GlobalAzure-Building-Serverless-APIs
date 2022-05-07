@@ -1,0 +1,39 @@
+### Swagger / OpenAPI Endpoints
+
+@hostUrlLocal = http://localhost:7071
+@hostUrlAzure = https://ga-serverlessapidemo-cc-fa.azurewebsites.net
+@hostUrl = {{hostUrlAzure}}
+
+
+### RenderOAuth2Redirect: 
+GET {{hostUrl}}/api/oauth2-redirect.html
+
+
+### RenderOpenApiDocument: 
+# GET {{hostUrl}}/api/openapi/{version}.{extension}
+
+###
+GET {{hostUrl}}/api/openapi/v3.yml
+
+###
+GET {{hostUrl}}/api/openapi/v3.json
+
+###
+GET {{hostUrl}}/api/openapi/v2.yml
+
+###
+GET {{hostUrl}}/api/openapi/v2.json
+
+
+### RenderSwaggerDocument: 
+# GET {{hostUrl}}/api/swagger.{extension}
+
+GET {{hostUrl}}/api/swagger.json
+
+### yml / yaml
+GET {{hostUrl}}/api/swagger.yaml
+
+
+### RenderSwaggerUI: 
+GET {{hostUrl}}/api/swagger/ui
+
